@@ -1,0 +1,286 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: "montesarrat";
+    src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+
+:root {
+    /* colors */
+    --white-01: #fff;
+    --white-02: #f5f5f5;
+    --white-bg-01: #e5e5e5;
+    --green-01: #68d66f;
+    --black: #000000;
+    --gray-01: rgb(210, 210, 210);
+
+    /* -- fonts */
+    --serif: serif;
+    --mono: monospace;
+    --sans: sans-serif;
+
+    /* -- heights & widths */
+    --header-height: 60px;
+    --site-width: 700px;
+}
+
+html {
+    display: block;
+    scroll-behavior: smooth;
+    font-size: 16px;
+    font-family: "montesarrat"; 
+}
+
+body {
+    display: block;
+    width: 100%;
+    position: relative;
+    background: var(--white-bg);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --section */
+.section {
+    display: block;
+    text-align: center;
+    padding: .25rem;
+    margin-top: .25rem;
+}
+
+.section__header {
+    display: block;
+    text-align: center;
+    padding: .5rem;
+    margin: .5rem;
+}
+
+.section-header {
+    font-size: 3rem;
+}
+
+.section-subheader {
+    font-size: 1.5rem;
+}
+
+.section__body {
+    display: block;
+    margin-top: 2.5rem;
+    padding: .5rem;
+}
+
+/* -- header -- */
+.header-wrapper {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: var(--header-height);
+    background: var(--white-01);
+    border-bottom: 1px solid var(--gray-01);
+}
+
+.header {
+    display: block;
+    width: var(--site-width);
+    background: var(--white-01);
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .25rem .5rem;
+}
+
+@media (max-width: 600px) {
+    .nav {
+        justify-content: flex-start;
+    }
+}
+
+.nav__right-nav {
+    display: flex;
+}
+
+.nav__center-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+    .nav__center-nav {
+        display: none;
+    }
+}
+
+.nav__left-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: .5rem;
+}
+
+.nav-item__media-area {
+    display: block;
+    margin-bottom: .25rem;
+}
+
+.nav-item__text-area {
+    display: block;
+}
+
+.nav-label {
+    text-transform: uppercase;
+    font-size: .75rem;
+    color: var(--black);
+}
+
+/* --site-main */
+.main-area-wrapper {
+    display: block;
+    padding-top: var(--header-height);
+}
+
+.main {
+    display: block;
+    max-width: var(--site-width);
+    margin: 0 auto;
+    padding: .25rem;
+}
+
+/* --card */
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: .5rem;
+}
+
+.card__media-area {
+    display: block;
+    margin-bottom: .25rem;
+}
+
+.card__info-area {
+    display: block;
+    margin: 1.25rem 0rem;
+    text-align: center;
+}
+
+.card-info {
+    font-size: .75rem;
+}
+
+.card-header {
+    text-align: center;
+    color: var(--green-01);
+    font-size: 2.75rem;
+    margin-bottom: .25rem;
+}
+
+.card-header-lg {
+    font-size: 3rem;
+}
+
+.card-header--md {
+    font-size: 1.5rem;
+}
+
+.card-header--sm {
+    font-size: .75rem;
+}
+
+.card__action-area {
+    display: block;
+    margin: .75rem 0rem;
+}
+
+.card-btn {
+    background: var(--green-01);
+    width: 150px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid var(--green-01);
+    border-radius: 30px 130px 30px;
+    padding: 8px;
+    transition: 0.3s;
+}
+
+.card-btn:hover {
+    background: #000;
+    color: var(--white-01);
+}
+
+/* --about-section */
+.about-section {
+    display: block;
+    text-align: center;
+}
+
+.feed__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .25rem;
+}
+
+@media (min-width: 420px) {
+    .feed__body {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* --gallery-section */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+}
+
+@media (min-width: 420px) {
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* --contact-section */
+.contact-section {
+    display: block;
+}
+
+/* gallery-section */
+.gallery-section{
+    display: block;
+    width: 100%;
+}
+
+/* --order-section */
+
+/* --footer */
+footer{
+    display: block;
+    width:100%;
+    padding:1rem 0 0 20px;
+    background: #eeeeee;
+}
